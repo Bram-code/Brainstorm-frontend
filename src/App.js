@@ -18,7 +18,13 @@ function App() {
           Learn React
         </a>
       </header>
+      <div >
+        <p className="m-3">Joe dit is een test</p>
+
+      </div>
     </div>
+
+
   );
 }
 

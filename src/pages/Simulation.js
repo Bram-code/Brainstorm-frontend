@@ -18,7 +18,7 @@ function Simulation() {
   }, [startSimulation]);
 
   //map varable
-const center = [51.914489639203964, 4.469976900179068];
+const center = [51.916032807137164, 4.484482425183319];
 
 const marker = [
   {
@@ -55,7 +55,7 @@ const costomIcon = new Icon({
         <>
         <MapContainer
         center={center}
-        zoom={11}
+        zoom={16}
         style={{ width: '100%', height: '60vh'}}>
     
           <TileLayer

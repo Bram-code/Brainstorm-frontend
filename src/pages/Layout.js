@@ -1,23 +1,27 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 
 const Layout = () => {
-    return (
-        <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
+  const location = useLocation();
 
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
+  return (
+    <>
+      <nav className={"flex justify-center text-red-600"}>
+        {location.pathname === "/simulation" && (
+          <Link className={""} to="/">
+            Return
+          </Link>
+        )}
 
-            <Outlet />
-        </>
-    )
+        {location.pathname === "/" && (
+          <Link className={""} to="/simulation">
+            Simulation
+          </Link>
+        )}
+      </nav>
+
+      <Outlet />
+    </>
+  );
 };
 
 export default Layout;
